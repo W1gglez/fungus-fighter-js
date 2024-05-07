@@ -49,6 +49,9 @@ function handleAttack(event) {
 
   if (fungusHP.value === 0) {
     fungus.classList.replace('walk', 'dead');
+    for (const button of buttons) {
+      button.setAttribute('disabled', 'disabled');
+    }
   } else if (playerAP.value === 0) {
     fungus.classList.replace('walk', 'jump');
     for (const button of buttons) {
