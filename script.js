@@ -52,6 +52,7 @@ function handleAttack(event) {
     for (const button of buttons) {
       button.setAttribute('disabled', 'disabled');
     }
+    clearInterval(fungusRegen);
   } else if (playerAP.value === 0) {
     fungus.classList.replace('walk', 'jump');
     for (const button of buttons) {
